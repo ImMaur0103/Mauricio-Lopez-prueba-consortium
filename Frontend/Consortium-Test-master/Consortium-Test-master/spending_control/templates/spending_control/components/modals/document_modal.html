@@ -1,0 +1,45 @@
+<div class="modal fade" id="uploadDocumentModal" tabindex="-1" aria-labelledby="uploadDocumentLabel" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="form_upload_document" enctype="multipart/form-data" @submit.prevent="submitDocument">
+        {% csrf_token %}
+        <div class="modal-header">
+          <h5 class="modal-title" id="uploadDocumentLabel"> Subir documento </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="document"> { uploadDocumentLabel } </label>
+            <input type="file" class="form-control-file" id="document" :name="uploadDocumentName">
+          </div>
+
+          <div class="alert" :class="badRequest ? 'alert-warning': 'alert-success' " role="alert" v-if="documentUploaded || badRequest">
+            <h5 class="alert-heading" v-if="!badRequest"> Documento subido correctamente </h5>
+            <h5 class="alert-heading" v-if="badRequest"> Error al subir el documento </h5>
+            <hr>
+            <p class="mb-0"> { documentWarningText } </p>
+            <p>
+              <div class="form-group">
+                <textarea class="form-control" rows="3" id="txt_justification" v-show="needJustification" v-model="justification"></textarea>
+              </div>
+              <button class="btn btn-info btn-sm mt-2" @click.prevent=submitJustification v-show="justification.length > 0"> Continuar </button>
+              <button class="btn btn-info btn-sm mt-2" @click.prevent="reload" v-if="documentUploaded && !needJustification"> Continuar </button>
+            </p>
+          </div>
+
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" v-show="!documentUploaded" data-dismiss="modal"> Cerrar </button>
+          <button type="submit" class="btn btn-primary" v-show="!documentUploaded"> Subir 
+            <div class="spinner-border text-light spinner-border-sm" role="status"  v-if="loadingUpload">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

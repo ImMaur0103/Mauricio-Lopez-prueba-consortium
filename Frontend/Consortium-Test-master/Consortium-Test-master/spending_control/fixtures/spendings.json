@@ -1,0 +1,362 @@
+[
+    {
+        "model": "spending_control.spending",
+        "pk": 1,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-19T04:03:35.031Z",
+            "liquidation_sent": "liquidation_sent/permisoVehicular-V002.jpg",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": []
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 2,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-20T04:19:13.829Z",
+            "liquidation_sent": "",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [2]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 3,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-21T10:00:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc1.pdf",
+            "account_status": "account_status/status1.pdf",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "invoice/inv1.pdf",
+            "type": "INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "Gasto completo",
+            "liquidations": [1, 3]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 4,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-22T11:30:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc2.jpg",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": false,
+            "justification": "Falta documentación",
+            "liquidations": [4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 5,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-23T09:15:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc3.pdf",
+            "account_status": "account_status/status2.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert1.pdf",
+            "signed_liquidation_certificate": "signed_liquidation_certificate/signed1.pdf",
+            "invoice": "invoice/inv2.pdf",
+            "type": "INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [2, 3, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 6,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-24T14:45:00.000Z",
+            "liquidation_sent": "",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "DELETED",
+            "totals_match": true,
+            "justification": "Gasto cancelado",
+            "liquidations": []
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 7,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-25T08:30:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc4.pdf",
+            "account_status": "account_status/status3.pdf",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [1]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 8,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-26T16:20:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc5.jpg",
+            "account_status": "account_status/status4.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert2.pdf",
+            "signed_liquidation_certificate": "",
+            "invoice": "invoice/inv3.pdf",
+            "type": "INVOICED",
+            "status": "PENDING",
+            "totals_match": false,
+            "justification": "Pendiente de firma",
+            "liquidations": [2, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 9,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-27T11:00:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc6.pdf",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [3]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 10,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-28T13:45:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc7.pdf",
+            "account_status": "account_status/status5.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert3.pdf",
+            "signed_liquidation_certificate": "signed_liquidation_certificate/signed2.pdf",
+            "invoice": "invoice/inv4.pdf",
+            "type": "INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [1, 2, 3, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 11,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-06-29T09:30:00.000Z",
+            "liquidation_sent": "",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "Nuevo gasto",
+            "liquidations": []
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 12,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-06-30T15:20:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc8.jpg",
+            "account_status": "account_status/status6.pdf",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "invoice/inv5.pdf",
+            "type": "INVOICED",
+            "status": "PENDING",
+            "totals_match": false,
+            "justification": "Pendiente de revisión",
+            "liquidations": [4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 13,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-07-01T10:00:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc9.pdf",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [1, 3]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 14,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-07-02T14:30:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc10.pdf",
+            "account_status": "account_status/status7.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert4.pdf",
+            "signed_liquidation_certificate": "signed_liquidation_certificate/signed3.pdf",
+            "invoice": "invoice/inv6.pdf",
+            "type": "INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [2, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 15,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-07-03T11:45:00.000Z",
+            "liquidation_sent": "",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "DELETED",
+            "totals_match": true,
+            "justification": "Gasto duplicado",
+            "liquidations": []
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 16,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-07-04T09:15:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc11.jpg",
+            "account_status": "account_status/status8.pdf",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": false,
+            "justification": "Pendiente de documentación",
+            "liquidations": [1]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 17,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-07-05T16:00:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc12.pdf",
+            "account_status": "account_status/status9.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert5.pdf",
+            "signed_liquidation_certificate": "",
+            "invoice": "invoice/inv7.pdf",
+            "type": "INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "Pendiente de firma",
+            "liquidations": [3, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 18,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-07-06T10:30:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc13.pdf",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [2]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 19,
+        "fields": {
+            "created_by": 2,
+            "created_at": "2024-07-07T13:00:00.000Z",
+            "liquidation_sent": "liquidation_sent/doc14.pdf",
+            "account_status": "account_status/status10.pdf",
+            "liquidation_certificate": "liquidation_certificate/cert6.pdf",
+            "signed_liquidation_certificate": "signed_liquidation_certificate/signed4.pdf",
+            "invoice": "invoice/inv8.pdf",
+            "type": "INVOICED",
+            "status": "FINISHED",
+            "totals_match": true,
+            "justification": "",
+            "liquidations": [1, 2, 3, 4]
+        }
+    },
+    {
+        "model": "spending_control.spending",
+        "pk": 20,
+        "fields": {
+            "created_by": 1,
+            "created_at": "2024-07-08T11:30:00.000Z",
+            "liquidation_sent": "",
+            "account_status": "",
+            "liquidation_certificate": "",
+            "signed_liquidation_certificate": "",
+            "invoice": "",
+            "type": "NOT_INVOICED",
+            "status": "PENDING",
+            "totals_match": true,
+            "justification": "Nuevo gasto pendiente",
+            "liquidations": []
+        }
+    }
+]

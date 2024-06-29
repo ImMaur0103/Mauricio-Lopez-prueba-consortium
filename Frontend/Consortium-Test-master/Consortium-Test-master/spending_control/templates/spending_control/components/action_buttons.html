@@ -1,0 +1,40 @@
+{% if not data.totals_match and data.justification|length == 0 %}
+    <button 
+        class="btn btn-sm btn-warning mr-1"
+        data-target="#addJustificationModal"
+        data-toggle="modal"
+        title="Agregar justificacion"
+        id="btnAddJustification"
+        @click.prevent="getSpendingId({{ spending.id }})">
+        <i class="ti-comment-alt p-1" style="cursor: pointer"></i>
+    </button>
+{% elif data.can_generate_liquidation_certificate %}
+    <a href="{% url 'spending_control:generate-liquidation-certificate' pk=data.pk %}" target="_blank" class="btn btn-sm btn-secondary mr-1" title="Generar conocimiento">
+        <i class="ti-import p-1" style="cursor: pointer"></i>
+    </a>
+{% else %}
+
+<button
+    data-toggle="modal"
+    data-target="#uploadDocumentModal"
+    title="Subir documento"
+    class="btn btn-sm btn-primary mr-1"
+    id="uploadDocumentButton"
+    @click="getDocumentNameToUpload({{ spending.id }})"
+    >
+    <i class="ti-upload p-1" style="cursor: pointer"></i>
+</button>
+
+{% endif %}
+
+{% if data.justification|length > 0 %}
+  <button
+    data-toggle="modal"
+    data-target="#viewJustificationModal"
+    title="Ver justificacion"
+    class="btn btn-sm btn-info"
+    @click.prevent="getJustification({{ spending.id }})"
+  >
+    <i class="ti-eye p-1" style="cursor: pointer"></i>
+</button>
+{% endif %}

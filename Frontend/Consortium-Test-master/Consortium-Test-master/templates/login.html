@@ -1,0 +1,159 @@
+<!doctype html>
+{% load static %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="{% static 'global/assets/static/images/new_favicon.png' %}" sizes="32x32" />
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <title>Sign In</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="{% static 'js/date/moment-with-locales.min.js' %}"></script>
+  <style>
+    body {
+      background-color: #f5f5f5 !important;
+    }
+
+    #loader {
+      transition: all .3s ease-in-out;
+      opacity: 1;
+      visibility: visible;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background: #fff;
+      z-index: 90000
+    }
+
+    #loader.fadeOut {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+      background-color: #333;
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+      animation: sk-scaleout 1s infinite ease-in-out
+    }
+
+    @-webkit-keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        opacity: 0
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0
+      }
+    }
+
+    figure {
+      max-width: 100%;
+      position: relative;
+    }
+
+    figure img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30),
+        0 15px 12px rgba(0, 0, 0, 0.22)
+    }
+  </style>
+</head>
+
+
+<body class="app">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      setTimeout(() => {
+        loader.classList.add('fadeOut');
+      }, 300);
+    });
+  </script>
+  <div class="peers ai-s fxw-nw h-100vh">
+    <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c" id="login_background"
+      style="background-image:url(/static/global/assets/images/new_cover_consortium.jpg);background-size: contain;">
+    </div>
+
+
+    <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 scrollable pos-r"
+      style="min-width:350px;padding-top: 20px!important;">
+
+      <div class="d-flex justify-content-center">
+        <img src="{% static 'global/assets/images/new_logo_consortium_azul.png' %}" width="250" height="170" alt="">
+      </div>
+      <center>
+        <h2 class="fw-300 c-grey-900 mB-40 mt-4"> Inicio de sesión </h2>
+      </center>
+      <form id="login-form" method="POST">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong> {{ form.non_field_errors }} </strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endif %}
+        <div class="form-group">
+          <label for="id_username" class="text-normal text-dark">Nombre de usuario</label>
+          <input type="text" class="form-control" name="username" required autofocus maxlength="100" id="id_username"
+            placeholder="Inserte su nombre de usuario">
+        </div>
+        <div class="form-group">
+          <label class="text-normal text-dark">Contrasena</label>
+          <input type="password" class="form-control" required name="password" placeholder="Inserte su contrasena"
+            id="id_password">
+
+        </div>
+        <div class="form-group">
+          <div class="peers ai-c jc-sb fxw-nw">
+            <div class="peer">
+              <button type="submit" class="btn btn-primary" id="login">Login</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+          {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'global/js/vendor.js' %}"></script>
+  <script type="text/javascript" src=" {% static 'global/js/bundle.js' %}"></script>
+</body>
+
+</html>

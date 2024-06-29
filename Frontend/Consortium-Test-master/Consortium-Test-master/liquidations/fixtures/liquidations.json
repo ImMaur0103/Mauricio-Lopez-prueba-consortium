@@ -1,0 +1,86 @@
+[
+    {
+        "model": "liquidations.liquidation",
+        "pk": 1,
+        "fields": {
+            "created": "2024-06-19T04:06:07.908Z",
+            "creator": 1,
+            "document_type_code": "Invoice",
+            "invoice_nit": "CF",
+            "invoice_serie": "123123",
+            "invoice_number": "234234",
+            "invoice_name": "Guatemala",
+            "invoice_adress": "Ciudad de Guatemala zona 5",
+            "total_value": "2500.00",
+            "description": "Liquidacion de cheque",
+            "document_link": "",
+            "state": 1,
+            "is_devolution": false,
+            "elimination_reason": "",
+            "document": "liquidations/Imagen1.png"
+        }
+    },
+    {
+        "model": "liquidations.liquidation",
+        "pk": 2,
+        "fields": {
+            "created": "2024-06-20T04:14:14.717Z",
+            "creator": 1,
+            "document_type_code": "Invoice",
+            "invoice_nit": "CF",
+            "invoice_serie": "C",
+            "invoice_number": "654321",
+            "invoice_name": "Juan Del Valle",
+            "invoice_adress": "CD",
+            "total_value": "2500.00",
+            "description": "Liquidacion de prueba",
+            "document_link": "",
+            "state": 1,
+            "is_devolution": false,
+            "elimination_reason": "",
+            "document": ""
+        }
+    },
+    {
+        "model": "liquidations.liquidation",
+        "pk": 3,
+        "fields": {
+            "created": "2024-06-20T04:16:10.695Z",
+            "creator": 1,
+            "document_type_code": "Invoice",
+            "invoice_nit": "CF",
+            "invoice_serie": "A",
+            "invoice_number": "244054",
+            "invoice_name": "Pedro Fernandez",
+            "invoice_adress": "Ciudad de Guatemala zona 14",
+            "total_value": "350.00",
+            "description": "Liquidacion efectuado hace unos dias",
+            "document_link": "",
+            "state": 1,
+            "is_devolution": false,
+            "elimination_reason": "",
+            "document": ""
+        }
+    },
+    {
+        "model": "liquidations.liquidation",
+        "pk": 4,
+        "fields": {
+            "created": "2024-06-20T04:18:58.204Z",
+            "creator": 1,
+            "document_type_code": "Invoice",
+            "invoice_nit": "CF",
+            "invoice_serie": "W",
+            "invoice_number": "12345678",
+            "invoice_name": "Benji Price",
+            "invoice_adress": "Ciudad, zona 10, colonia el amigo",
+            "total_value": "480.00",
+            "description": "LIquidacion de testeo",
+            "document_link": "",
+            "state": 1,
+            "is_devolution": false,
+            "elimination_reason": "",
+            "document": ""
+        }
+    }
+]
