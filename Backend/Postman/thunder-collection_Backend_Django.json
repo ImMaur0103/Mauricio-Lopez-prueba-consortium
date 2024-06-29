@@ -1,0 +1,168 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Backend_Django",
+    "collectionId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+    "dateExported": "2024-06-29T04:04:59.271Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "30743678-2f64-4c3e-8ca5-a7ff80380bae",
+            "name": "Pruebas Basicas",
+            "containerId": "",
+            "created": "2024-06-28T18:27:34.985Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "c8c40e6b-7606-45b7-bf7c-6da712829ebe",
+            "name": "Token",
+            "containerId": "",
+            "created": "2024-06-28T21:19:59.554Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "02f6b7e6-3ced-4165-bd3e-0d89763995cd",
+            "name": "Main process",
+            "containerId": "",
+            "created": "2024-06-28T21:20:33.129Z",
+            "sortNum": 30000,
+            "settings": {
+                "headers": [
+                    {
+                        "name": "Authorization",
+                        "value": "{{Token}}"
+                    }
+                ]
+            }
+        }
+    ],
+    "requests": [
+        {
+            "_id": "8cb2106c-0fca-4d3d-8de8-1afee4da4b6d",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "30743678-2f64-4c3e-8ca5-a7ff80380bae",
+            "name": "DB test",
+            "url": "http://localhost:8000/api/test-db/",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-28T18:27:48.027Z",
+            "modified": "2024-06-28T22:07:14.647Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "{{Token}}"
+                }
+            ]
+        },
+        {
+            "_id": "a096a461-eb63-4a3c-b32e-f7481729e081",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "c8c40e6b-7606-45b7-bf7c-6da712829ebe",
+            "name": "Token",
+            "url": "http://localhost:8000/api/api-token-auth/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-28T21:20:40.254Z",
+            "modified": "2024-06-28T22:06:54.310Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"lopez\",\n  \"password\": \"Lopez0103\"\n}",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "var jsonData = tc.response.json();\r",
+                            "tc.setVar(\"Token\", (\"Token \" + jsonData.token));\r",
+                            "\r",
+                            "console.log(tc.getVar(\"Token\"));"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "577ca0b9-d08f-4e9f-a005-ff779727d297",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "30743678-2f64-4c3e-8ca5-a7ff80380bae",
+            "name": "Token test",
+            "url": "http://localhost:8000/api/api-token-auth/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-06-28T18:28:37.094Z",
+            "modified": "2024-06-28T19:06:52.639Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"lopez\",\n  \"password\": \"Lopez0103\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cd6133e8-cd54-442e-bb23-7c2ae6b5b5b6",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "30743678-2f64-4c3e-8ca5-a7ff80380bae",
+            "name": "test auth",
+            "url": "http://localhost:8000/api/test-auth/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-06-28T18:28:50.651Z",
+            "modified": "2024-06-28T21:17:41.535Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Token 304c51258e0a95a81bc2ed28367377cbda12daf9"
+                }
+            ]
+        },
+        {
+            "_id": "f577014a-4ace-4768-bd70-1792e7bc3ed9",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "02f6b7e6-3ced-4165-bd3e-0d89763995cd",
+            "name": "Ingreso Entidad",
+            "url": "http://localhost:8000/api/Notification/",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-06-28T21:22:09.435Z",
+            "modified": "2024-06-28T23:24:10.179Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"fecha_recepcion\": \"2024-07-01\",\n  \"hora_recepcion\": \"09:15:00\",\n  \"entidad_emisora\": \"Divanoodle\",\n  \"numero_cedula_expediente\": \"1234 56789 0123\",\n  \"dirigido_a\": \"Putnam Piwall\",\n  \"recepcionista\": \"Birgit Gayler\",\n  \"archivo_pdf\": \"\",\n  \"hora_entrega_interna\": null,\n  \"colaborador_entrega\": null,\n  \"fecha_hora_entrega\": null\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1063a553-f425-4e4e-8aef-816dc7b37c96",
+            "colId": "0c7ec1fb-3ec4-4731-adad-19b55d9de9a9",
+            "containerId": "02f6b7e6-3ced-4165-bd3e-0d89763995cd",
+            "name": "Recepcion Entidad",
+            "url": "http://localhost:8000/api/Notification/Ingresada/",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-06-29T00:58:00.634Z",
+            "modified": "2024-06-29T03:56:50.828Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":49,\n  \"fecha_recepcion\": \"2024-07-01\",\n  \"hora_recepcion\": \"09:15:00\",\n  \"entidad_emisora\": \"Divanoodle\",\n  \"numero_cedula_expediente\": \"1234 56789 0123\",\n  \"dirigido_a\": \"Putnam Piwall\",\n  \"recepcionista\": \"Birgit Gayler\",\n  \"archivo_pdf\": \"\",\n  \"hora_entrega_interna\": \"10:30:00\",\n  \"colaborador_entrega\": \"Mauricio Lopez\",\n  \"fecha_hora_entrega\": \"2024-07-01 09:15:00\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "envId": "031bae52-5306-4a81-a040-8d9ce18a8443"
+    },
+    "ref": "Ooxvk7-GOGPgFMn0b-bPC05SGdlMHDV_u6k42rXYoK3leGAXmAzHyclpP6bJSddsyGr6zwG8zW4XEZ7JdaEbHA"
+}
